@@ -1,7 +1,87 @@
+// Funciones útiles para cadenas de texto
+// length → devuelve la cantidad de caracteres.
+// toUpperCase() → convierte a mayúsculas.
+// toLowerCase() → convierte a minúsculas.
+// charAt() → devuelve el carácter en una posición.
+// includes() → verifica si contiene una subcadena.
+// indexOf() → devuelve la posición de la primera coincidencia.
+// lastIndexOf() → devuelve la posición de la última coincidencia.
+// slice() → extrae una parte de la cadena.
+// substring() → extrae parte de la cadena (sin índices negativos).
+// substr() → extrae una cantidad de caracteres desde una posición.
+// replace() → reemplaza texto por otro.
+// trim() → quita espacios al inicio y al final.
+// trimStart() → quita espacios al inicio.
+// trimEnd() → quita espacios al final.
+// split() → divide la cadena en un arreglo.
+// concat() → une dos o más cadenas.
+// startsWith() → verifica si comienza con una subcadena.
+// endsWith() → verifica si termina con una subcadena.
+// toString() → convierte el valor a cadena.
+
+// Funciones útiles para arrays
+// length → devuelve la cantidad de elementos del array.
+// push() → agrega un elemento al final.
+// pop() → elimina el último elemento.
+// unshift() → agrega un elemento al inicio.
+// shift() → elimina el primer elemento.
+// concat() → une dos o más arrays.
+// join() → une los elementos en una cadena.
+// slice() → devuelve una parte del array sin modificarlo.
+// splice() → agrega, elimina o reemplaza elementos (modifica el array).
+// indexOf() → devuelve la posición de un elemento.
+// lastIndexOf() → devuelve la última posición de un elemento.
+// includes() → verifica si contiene un valor.
+// forEach() → ejecuta una función por cada elemento.
+// map() → crea un nuevo array aplicando una función a cada elemento.
+// filter() → devuelve un nuevo array con los elementos que cumplan una condición.
+// find() → devuelve el primer elemento que cumpla una condición.
+// findIndex() → devuelve el índice del primer elemento que cumpla una condición.
+// every() → verifica si todos los elementos cumplen una condición.
+// some() → verifica si algún elemento cumple una condición.
+// sort() → ordena los elementos del array.
+// reverse() → invierte el orden de los elementos.
+// toString() → convierte el array a una cadena.
+// Array.isArray() → verifica si una variable es un array
+
 
 const calculo=()=>
     {
     let numero=prompt("ingrese su numero: ")
     let res=numero*numero
     alert("su resultado es: "+res)
+}
+
+let texto=()    =>
+{
+    let cadena=prompt("ingrese su cadena: ")
+    let resultado=cadena.toUpperCase()
+    alert("su cadena en mayusculas es: "+resultado)
+}
+
+let filtrar=()=>
+{
+    let array=prompt("ingrese varios numeros separados por comas: ")
+    let arrayNumeros=array.split(",").map(Number)
+    let resultado=arrayNumeros.filter(num => num > 10)
+    alert("los numeros mayores a 10 son: "+resultado)
+}
+
+let verificarCadena=()=>
+{
+    let cadena=prompt("ingrese una cadena: ")
+    let contieneHola=cadena.includes("hola")
+    if (contieneHola) {
+        alert("La cadena contiene 'hola'")
+    } else {
+        alert("La cadena no contiene 'hola'")
+    }
+}
+
+let mezclarcadenas=()=>
+{
+    let cadena1=prompt("ingrese la primera cadena: ")
+    let cadena2=prompt("ingrese la segunda cadena: ")
+   concatena=cadena1.concat(" ",cadena2)
+   alert("la cadena resultante es: "+concatena.toUpperCase())
 }
