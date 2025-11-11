@@ -85,3 +85,50 @@ let mezclarcadenas=()=>
    concatena=cadena1.concat(" ",cadena2)
    alert("la cadena resultante es: "+concatena.toUpperCase())
 }
+
+let sumararray=()=>
+{
+    let array=prompt("ingrese varios numeros separados por comas: ")
+    let arrayNumeros=array.split(",").map(Number)
+    let suma=arrayNumeros.reduce((acum, num) => acum + num, 0)
+    alert("la suma de los numeros es: "+suma)
+   
+}
+
+// Dado un array de palabras, crea una función flecha que filtre las palabras que tengan más de 4 letras y
+// devuelva un nuevo array con esas palabras en mayúsculas.
+
+let palabras=()=>
+{
+    let arrayPalabras=prompt("ingrese varias palabras separadas por comas: ")
+    let arrayFiltrado=arrayPalabras.split(",").filter(palabra => palabra.length > 4).map(palabra => palabra.toUpperCase())
+    alert("las palabras con mas de 4 letras en mayusculas son: "+arrayFiltrado)
+}
+
+let vocales=()=>
+{
+    let cadena=prompt("ingrese una vocal: ")
+    let esVocal=cadena.toLowerCase().includes("a") || cadena.toLowerCase().includes("e") || cadena.toLowerCase().includes("i") || cadena.toLowerCase().includes("o") || cadena.toLowerCase().includes("u")
+    if (esVocal) {
+        alert("Es una vocal")
+    } else {
+        alert("No es una vocal")
+    }
+}
+
+let reemplazarpalabras=()=>
+{
+    let cadena=prompt("ingrese una palabra: ")
+    let nuevaCadena=cadena.replace(/a/gi, "@").replace(/e/gi, "3").replace(/i/gi, "1").replace(/o/gi, "0").replace(/u/gi, "ü")
+    alert("la nueva cadena es: "+nuevaCadena)
+}   
+
+let ordenararray=()=>
+{
+    let array=prompt("ingrese varios numeros separados por comas: ")
+    let arrayNumeros=array.split(",").map(Number)
+    let arrayOrdenado=arrayNumeros.sort((a, b) => a - b)
+    alert("el array ordenado es: "+arrayOrdenado)
+}
+
+
