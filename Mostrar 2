@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+    <script src="ejercicios.js"></script>
+</head>
+<body>
+    <button onclick="ordenarYUnir()">Ordenar</button>
+    <div id="ordenado"></div>
+
+    <button onclick="reemplazarPalabra()">remplaza</button>
+    <div id="reemplazo"></div>
+
+    <button onclick="contarVocales()">Vocales</button>
+    <div id="vocales"></div>
+
+    <button onclick="filtrarMayusculas()">Filtrado</button>
+    <div id="Ururu"></div>
+
+    <button onclick="sumarArray()">sumar array</button>
+    <div id="suma"></div>
+
+    <button onclick="unirCadenas()">unir cadenas</button>
+    <div id="cadenas"></div>
+    
+    <button onclick="verificarSubcadena()">subcadena</button>
+    <div id="subcadena"></div>
+
+    <button onclick="cambio()">Texto Inferior</button>
+    <div id="2">Hola como te va</div>
+
+    <button onclick="calculo()">calcular</button>
+    <p id="cuadrado"></p>
+    
+    <button onclick="a()">array</button>
+    <div id="vector"></div> 
+    
+</body>
+</html>
