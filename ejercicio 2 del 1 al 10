@@ -1,1 +1,92 @@
+// ej1
+const calculo=()=>{
+    let numero=prompt("ingrese su numero: ");
+    let res=numero*numero;
+    
+    const elem=document.getElementById("cuadrado");
+    elem.innerHTML="resultado 1: "+res;
+}
 
+// ej2
+const cambio=()=>{
+    const div=document.getElementById("2");
+    div.innerHTML="Shorty como te va?? el perfume de tu cuerpo no se me va"
+}
+
+// ej3
+const a=()=>{
+    let arrai=[11,12,3,4];
+    let filtrados=arrai.filter(i=>i>=10);
+    nuevo=document.getElementById("vector")
+    nuevo.innerHTML=filtrados;
+}
+
+// ej4 Verificar subcadena y cambiar color según resultado
+const verificarSubcadena=()=>{
+    let cadena=prompt("ingrese una cadena de texto: ");
+    const elemento=document.getElementById("subcadena");    
+    if(cadena.includes("Moro")){
+        elemento.style.color="green";
+        elemento.innerHTML="La cadena contiene 'La palabra Moro'";
+    } else {
+        elemento.style.color="red";
+        elemento.innerHTML="La cadena no contiene 'La palabra Moro'";
+    }
+}
+// ej5 Mostrar el resultado en mayúsculas dentro de un <p> y agregarle una clase "resaltado".
+const unirCadenas=()=>{
+    let cadena1=prompt("ingrese la primera cadena: ");
+    let cadena2=prompt("ingrese la segunda cadena: ");
+    let resultado=cadena1.concat(" ",cadena2).toUpperCase();
+    const elemento=document.getElementById("cadenas");
+    elemento.style.color="green";
+    elemento.className="resaltado";
+    elemento.innerHTML=resultado;
+}
+// ej6 Sumar arrays y mostrar el resultado en el dom
+const sumarArray=()=>{
+    let array1=[1,2,3];
+    let array2=[4,5,6];
+    let suma=array1.map((num,i)=>num+array2[i]);
+    const elemento=document.getElementById("suma");
+    elemento.innerHTML="La suma de los arrays es: "+suma;
+}
+
+// ej7 Filtrar las mayúsculas y crear un nuevo elementos
+const filtrarMayusculas=()=>{
+    let array=["Hola","mundo","Moro","es","Genial"];
+    let mayusculas=array.filter(palabra=>palabra===palabra.toUpperCase());
+    const elemento=document.getElementById("Ururu");
+    elemento.innerHTML="Palabras en mayúsculas: "+array.filter(palabra=>palabra[0]===palabra[0].toUpperCase());
+}
+// ej8  Contar vocales y mostrarlo
+const contarVocales=()=>{
+    let texto=prompt("Ingrese un texto: ");
+    let contador=0;
+    const vocales=["a","e","i","o","u","A","E","I","O","U"];
+    for(let char of texto){
+        if(vocales.includes(char)){
+            contador++;
+        }
+    }
+    const elemento=document.getElementById("vocales");
+    elemento.innerHTML="Número de vocales: "+contador;
+}
+
+// ej9  Reemplazar palabra y mostrar resultado
+const reemplazarPalabra=()=>{
+    let texto=prompt("Ingrese un texto: ");
+    let palabraAReemplazar=prompt("Ingrese la palabra a reemplazar: ");
+    let nuevaPalabra=prompt("Ingrese la nueva palabra: ");
+    let nuevoTexto=texto.replace(new RegExp(palabraAReemplazar, 'g'), nuevaPalabra);
+    const elemento=document.getElementById("reemplazo");
+    elemento.innerHTML="Texto modificado: "+nuevoTexto;
+}
+
+// ej10 Ordenar, unir y mostrarlo
+const ordenarYUnir=()=>{
+    let array=["Moro","Homero","Tucho","Matias","Ana"];
+    let ordenado=array.sort().join(", ");
+    const elemento=document.getElementById("ordenado");
+    elemento.innerHTML="Nombres ordenados: "+ordenado;
+}
